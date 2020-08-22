@@ -12,7 +12,7 @@ const userSchema = {
       type: 'string',
       enum: ['male', 'female', 'other'],
     },
-    passowrd: {
+    password: {
       type: 'string',
     },
     date_of_birth: {
@@ -56,8 +56,8 @@ const userSchema = {
       },
     },
   },
-  required: ['color'],
-  encrypted: ['passowrd'],
+  required: ['name', 'sex', 'password'],
+  encrypted: ['password'],
 }
 
 module.exports = {

@@ -1,3 +1,3 @@
 module.exports = {
-  createUsersAndPosts: require('./create.curd').createUsersAndPosts,
+  ...require('./create.curd'),
 }
