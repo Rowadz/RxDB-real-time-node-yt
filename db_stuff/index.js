@@ -1,3 +1,4 @@
 module.exports = {
-  initDB: require('./createCon').init,
+  ...require('./createCon'),
+  ...require('./CRUD'),
 }

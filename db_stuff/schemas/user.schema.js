@@ -38,6 +38,23 @@ const userSchema = {
         },
       },
     },
+    posts: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string',
+          },
+          title: {
+            type: 'string',
+          },
+          body: {
+            type: 'string',
+          },
+        },
+      },
+    },
   },
   required: ['color'],
   encrypted: ['passowrd'],

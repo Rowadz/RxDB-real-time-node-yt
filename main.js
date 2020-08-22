@@ -1,3 +1,8 @@
-const { initDB } = require('./db_stuff')
+const { initDB, createUsersAndPosts } = require('./db_stuff')
 
-initDB()
+const initApp = async () => {
+  const db = await initDB()
+  createUsersAndPosts(db)
+}
+
+initApp()
