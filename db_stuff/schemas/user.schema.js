@@ -57,7 +57,6 @@ const userSchema = {
     },
   },
   required: ['name', 'sex', 'password'],
-  encrypted: ['password'],
 }
 
 module.exports = {

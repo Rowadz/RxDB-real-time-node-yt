@@ -10,6 +10,7 @@ const initDB = async () => {
       adapter: leveldown,
       password: 'myPassword',
     })
+
     await db.collection({
       schema: userSchema,
       name: 'users',

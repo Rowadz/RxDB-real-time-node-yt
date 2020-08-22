@@ -1,3 +1,4 @@
 module.exports = {
-  ...require('./create.curd'),
+  ...require('./create.crud'),
+  ...require('./read.crud'),
 }
