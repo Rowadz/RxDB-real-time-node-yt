@@ -1,1 +1,3 @@
-const { createRxDatabase, RxDatabase } = require('rxdb')
+const { initDB } = require('./db_stuff')
+
+initDB()
