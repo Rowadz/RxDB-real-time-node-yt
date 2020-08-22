@@ -1,0 +1,24 @@
+{
+  "name": "RxDB-real-time-node-yt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammedAl-Rowad/RxDB-real-time-node-yt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohammedAl-Rowad/RxDB-real-time-node-yt/issues"
+  },
+  "homepage": "https://github.com/MohammedAl-Rowad/RxDB-real-time-node-yt#readme",
+  "dependencies": {
+    "rxdb": "^9.5.0",
+    "rxjs": "^6.6.2"
+  }
+}
