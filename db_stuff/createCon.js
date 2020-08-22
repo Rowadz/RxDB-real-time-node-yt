@@ -20,7 +20,7 @@ const initDB = async () => {
     // collection of this database. You can pass true as a parameter to decrypt the
     // encrypted data-fields of your document.
 
-    db.dump().then(console.log)
+    // db.dump().then(console.log)
     return db
   } catch (error) {
     console.error(error)
