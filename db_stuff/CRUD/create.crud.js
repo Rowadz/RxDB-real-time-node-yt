@@ -3,7 +3,7 @@ const shortid = require('shortid')
 const createUsersAndPosts = async (db) => {
   const { users } = db.collections
   const userDoc = await users.insert({
-    name: `rowad${Date.now()}`,
+    name: `rowadz`,
     sex: 'male',
     password: 'secret',
     addresses: [
