@@ -14,6 +14,16 @@ const initDB = async () => {
     await db.collection({
       schema: userSchema,
       name: 'users',
+      migrationStrategies: {
+        1: oldDoc => {
+          oldDoc.age = 0
+          return oldDoc
+        },
+        2: oldDoc => {
+          oldDoc.age = oldDoc.age || null
+          return oldDoc
+        }
+      }
     })
 
     // Use this function to create a json-export from every piece of data in every

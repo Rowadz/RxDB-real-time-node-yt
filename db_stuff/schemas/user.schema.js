@@ -1,6 +1,6 @@
 const userSchema = {
   title: 'user schema',
-  version: 0,
+  version: 2,
   description: 'what a typical user should look like',
   type: 'object',
   properties: {
@@ -18,6 +18,9 @@ const userSchema = {
     date_of_birth: {
       type: 'string',
       format: 'date',
+    },
+    age: {
+      type: ['number', 'null']
     },
     addresses: {
       type: 'array',
