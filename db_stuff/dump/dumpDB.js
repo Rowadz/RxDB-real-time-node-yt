@@ -1,21 +1,21 @@
-const { writeFileSync } = require('fs')
+const { writeFile } = require('fs')
+const { join } = require('path')
+const { promisify } = require('util')
+const writeFileAsync = promisify(writeFile)
 
 // https://rxdb.info/rx-database.html#dump
 const dumpDB = async (db) => {
-  db.dump().then((data) => {
-    writeFileSync('./data.json', JSON.stringify(data, null, 2))
-  })
+  const databaseObj = await db.dump()
+  await writeFileAsync(join(__dirname, 'data.json'), JSON.stringify(databaseObj, null, 2)).catch(console.error)
 }
 
 // https://rxdb.info/rx-database.html#importdump
 const importDump = (db, json) => {
-  emptyDatabase.importDump(json).then(() => {
+  db.importDump(json).then(() => {
     console.log('DONE')
   })
 }
 
-
 module.exports = {
-    dumpDB,
-  }
-  
+  dumpDB,
+}
