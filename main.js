@@ -1,12 +1,8 @@
-const { initDB, createUsersAndPosts, queries } = require('./db_stuff')
+const { initDB, createUsersAndPosts, queries, dumpDB } = require('./db_stuff')
 require('colors')
 
 const initApp = async () => {
   const db = await initDB()
-  setTimeout(() => {
-    createUsersAndPosts(db)
-    queries(db)
-  }, 1000)
   const { users } = db.collections
 
   // you can also observe single event-types with insert$ update$ remove$
@@ -19,9 +15,12 @@ const initApp = async () => {
     )
   })
 
-  setTimeout(() => {
+  queries(db)
+  setInterval(() => {
     createUsersAndPosts(db)
-  }, 5000)
+  }, 2000)
+
+  dumpDB(db)
   //   users.update$.subscribe((changeEvent) => console.log(changeEvent))
   //   users.remove$.subscribe((changeEvent) => console.log(changeEvent))
 }
