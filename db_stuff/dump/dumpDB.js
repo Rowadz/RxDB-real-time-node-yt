@@ -10,9 +10,9 @@ const dumpDB = async (db) => {
 }
 
 // https://rxdb.info/rx-database.html#importdump
-const importDump = (db, json) => {
-  db.importDump(json).then(() => {
-    console.log('DONE')
+const importDump = (db, obj) => {
+  db.importDump(obj).then(() => {
+    console.log('IMPORTED')
   })
 }
 
